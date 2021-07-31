@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+REPO=$(dirname $(readlink -f $0))
+
+# Alacritty
+cp -f "$HOME/.config/alacritty/alacritty.yml" "$REPO/alacritty/alacritty.yml"
+
+# ZSH
+cp -f "$HOME/.zshrc" "$REPO/zsh/.zshrc"
+cp -f "$HOME/.p10k.zsh" "$REPO/zsh/.p10k.zsh"
+
