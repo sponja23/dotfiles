@@ -87,6 +87,7 @@ plugins=(
     screen
     sudo
     themes
+    web-search
     zsh-syntax-highlighting
 )
 
@@ -136,3 +137,7 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
 
+# Autocomplete scripts
+eval "$(register-python-argcomplete3 music)"
+
+[ -f "/home/sponja/.ghcup/env" ] && source "/home/sponja/.ghcup/env" # ghcup-env
