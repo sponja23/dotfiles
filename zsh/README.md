@@ -1,16 +1,8 @@
 # ZSH Dotfiles
 
-
-## .zshrc
-
 Requirements:
 
-     * oh-my-zsh
-     * autojump
-     * powerlevel10k
-
-## .p10k.zsh
-
-Requirements:
-     
-     * powerlevel10k
+* [oh-my-zsh](https://ohmyz.sh/)
+* [autojump](https://github.com/wting/autojump)
+* [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+* [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
