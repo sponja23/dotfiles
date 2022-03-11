@@ -10,7 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sponja/.oh-my-zsh"
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.commands:$HOME/.cargo/bin:$HOME/.cabal/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.commands"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -89,6 +89,9 @@ plugins=(
     themes
     web-search
     zsh-syntax-highlighting
+    dirhistory
+    copyfile
+    copypath
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,11 +118,12 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+EDITOR=code
+
 alias open=xdg-open
 alias python=python3
 alias pip=pip3
-alias zshconfig="subl ~/.zshrc"
-alias code=code-insiders
+alias zshconfig="$EDITOR ~/.zshrc"
 
 
 # Completions
@@ -136,8 +140,3 @@ autoload bashcompinit && bashcompinit
 typeset -A ZSH_HIGHLIGHT_STYLES
 
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
-
-# Autocomplete scripts
-eval "$(register-python-argcomplete3 music)"
-
-[ -f "/home/sponja/.ghcup/env" ] && source "/home/sponja/.ghcup/env" # ghcup-env
