@@ -127,16 +127,16 @@ alias zshconfig="$EDITOR ~/.zshrc"
 
 
 # Completions
-
 autoload compinit && compinit
-
 autoload bashcompinit && bashcompinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 # Syntax Highlighter changes
 typeset -A ZSH_HIGHLIGHT_STYLES
-
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
+
+# fzf setup
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
