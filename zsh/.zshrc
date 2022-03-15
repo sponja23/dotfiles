@@ -82,6 +82,7 @@ plugins=(
     dirhistory
     copyfile
     copypath
+    pip
 )
 
 source $ZSH/oh-my-zsh.sh
