@@ -83,6 +83,8 @@ plugins=(
     copyfile
     copypath
     pip
+    npm
+    stack
 )
 
 source $ZSH/oh-my-zsh.sh
