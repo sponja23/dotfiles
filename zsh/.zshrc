@@ -5,8 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# PATH
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.commands"
+# .profile
+source "$HOME/.profile"
 
 # Path of oh-my-zsh installation
 export ZSH="/home/sponja/.oh-my-zsh"
@@ -112,7 +112,7 @@ autoload bashcompinit && bashcompinit
 
 zstyle ':completion:*' verbose yes
 
-[ "$(command -v pipenv)" ] && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # Pipenv completions
+# [ "$(command -v pipenv)" ] && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # Pipenv completions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
