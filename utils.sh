@@ -4,7 +4,7 @@ test-arch() {
 }
 
 test-debian() {
-    [ -f "/etc/debian-version" ]
+    [ -f "/etc/debian_version" ]
 }
 
 ### Commenting/Uncommenting Lines

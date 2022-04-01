@@ -12,4 +12,4 @@ else
     exit 1
 fi
 
-ln -s $PWD/.alacritty.yml $HOME/
+ln -fs $PWD/.alacritty.yml $HOME/
