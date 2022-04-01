@@ -34,3 +34,11 @@ AUR_HELPER=yay
 aur-install() {
     $AUR_HELPER -S --noconfirm "$@"
 }
+
+debian-install() {
+    sudo apt install -y "$@"
+}
+
+debian-add-repository() {
+    sudo add-apt-repository -y "$@" 
+}
