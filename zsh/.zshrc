@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 # Variables
-export EDITOR=code
+export EDITOR=nvim
 
 # Aliases
 alias open=xdg-open
