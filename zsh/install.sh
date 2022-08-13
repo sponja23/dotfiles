@@ -10,9 +10,9 @@ if test-arch; then
     aur-install oh-my-zsh autojump fzf gitflow-avh
 
     # Custom plugins
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-    git clone https://github.com/petervanderdoes/git-flow-completion ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/git-flow-completion
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    git clone https://github.com/petervanderdoes/git-flow-completion "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/git-flow-completion
 elif test-debian; then
     # ZSH
     debian-install zsh
@@ -24,8 +24,8 @@ elif test-debian; then
     debian-install autojump fzf
 
     # Custom plugins
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
 
     echo "MesloLGS Nerd Font must be installed manually on debian"
 else
@@ -35,8 +35,8 @@ fi
 
 
 # Configs
-ln -fs $PWD/.p10k.zsh $HOME/
-ln -fs $PWD/.zshrc $HOME/
+ln -fs "$PWD"/.p10k.zsh "$HOME"/
+ln -fs "$PWD"/.zshrc "$HOME"/
 
 # Set default shell
-chsh -s $(which zsh)
+chsh -s "$(which zsh)"

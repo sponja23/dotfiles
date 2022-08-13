@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ### Platform testing
 test-arch() {
     [ -f "/etc/arch-release" ]
