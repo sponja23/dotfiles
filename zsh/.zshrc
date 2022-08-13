@@ -72,8 +72,12 @@ plugins=(
     autojump
     colored-man-pages
     command-not-found
+    copypath
     emoji
     git
+    gitfast
+    git-flow-completion
+    gitignore
     screen
     sudo
     themes
@@ -103,10 +107,14 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=nvim
 
 # Aliases
-alias open=xdg-open
 alias python=python3
 alias pip=pip3
 alias zshconfig="$EDITOR ~/.zshrc"
+
+# Functions
+function open() {
+    xdg-open $@ > /dev/null 2>&1
+}
 
 # Completions
 autoload compinit && compinit
@@ -115,6 +123,7 @@ autoload bashcompinit && bashcompinit
 zstyle ':completion:*' verbose yes
 
 # [ "$(command -v pipenv)" ] && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # Pipenv completions
+[ -x "$(command -v rclone)" ] && rclone completion zsh > "${fpath[1]}/_rclone"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

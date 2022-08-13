@@ -7,11 +7,12 @@ if test-arch; then
     arch-install zsh
     
     # Oh-My-Zsh and plugin dependencies
-    aur-install oh-my-zsh autojump fzf
+    aur-install oh-my-zsh autojump fzf gitflow-avh
 
     # Custom plugins
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+    git clone https://github.com/petervanderdoes/git-flow-completion ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/git-flow-completion
 elif test-debian; then
     # ZSH
     debian-install zsh
