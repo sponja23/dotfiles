@@ -75,8 +75,7 @@ plugins=(
     copypath
     emoji
     git
-    gitfast
-    git-flow-completion
+    git-flow-avh
     gitignore
     screen
     sudo
