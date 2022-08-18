@@ -8,3 +8,4 @@ Requirements:
 * [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 * [fzf](https://github.com/junegunn/fzf)
+* [git-flow](https://github.com/petervanderdoes/gitflow-avh)
