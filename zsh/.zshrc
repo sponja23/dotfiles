@@ -139,3 +139,9 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
 # fzf setup
 [[ ! -f /usr/share/fzf/key-bindings.zsh ]] || source /usr/share/fzf/key-bindings.zsh
 [[ ! -f /usr/share/fzf/completion.zsh ]] || source /usr/share/fzf/completion.zsh
+
+# git functions
+_ZSHRC_FILE="$(readlink -f $HOME/.zshrc)"
+for file in "$(dirname $_ZSHRC_FILE)"/functions/*; do
+    source $file
+done
