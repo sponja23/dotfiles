@@ -68,6 +68,9 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+NVM_LAZY=1
+
 plugins=(
     autojump
     colored-man-pages
@@ -87,6 +90,7 @@ plugins=(
     copypath
     pip
     npm
+    nvm
     stack
     tmux
 )
