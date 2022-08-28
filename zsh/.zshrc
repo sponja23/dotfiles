@@ -88,6 +88,7 @@ plugins=(
     pip
     npm
     stack
+    tmux
 )
 
 source $ZSH/oh-my-zsh.sh

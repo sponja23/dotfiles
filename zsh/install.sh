@@ -4,7 +4,7 @@ source ../utils.sh
 
 if test-arch; then
     # ZSH 
-    arch-install zsh
+    arch-install zsh tmux
     
     # Oh-My-Zsh and plugin dependencies
     aur-install oh-my-zsh autojump fzf gitflow-avh
