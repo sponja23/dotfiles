@@ -6,8 +6,11 @@ if test-arch; then
     # ZSH
     arch-install zsh tmux
 
+    # oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
     # Oh-My-Zsh and plugin dependencies
-    aur-install oh-my-zsh-git autojump fzf gitflow-avh
+    aur-install autojump fzf gitflow-avh
 
     # Custom plugins
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
@@ -42,4 +45,4 @@ ln -fs "$PWD"/.p10k.zsh "$HOME"/
 ln -fs "$PWD"/.zshrc "$HOME"/
 
 # Set default shell
-# chsh -s "$(which zsh)"
+chsh -s "$(which zsh)"
