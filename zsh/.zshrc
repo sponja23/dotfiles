@@ -69,8 +69,6 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-NVM_LAZY=1
-
 plugins=(
     autojump
     colored-man-pages
@@ -80,6 +78,7 @@ plugins=(
     git
     git-flow-avh
     gitignore
+    git-extra-commands
     screen
     sudo
     themes
@@ -90,7 +89,6 @@ plugins=(
     copypath
     pip
     npm
-    nvm
     stack
     tmux
 )
@@ -114,6 +112,7 @@ export EDITOR=nvim
 alias python=python3
 alias pip=pip3
 alias zshconfig="$EDITOR ~/.zshrc"
+alias vim=nvim
 
 # Functions
 function open() {
@@ -139,6 +138,9 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
 # fzf setup
 [[ ! -f /usr/share/fzf/key-bindings.zsh ]] || source /usr/share/fzf/key-bindings.zsh
 [[ ! -f /usr/share/fzf/completion.zsh ]] || source /usr/share/fzf/completion.zsh
+
+# The Fuck setup
+[ -x "$(command -v thefuck)" ] && eval $(thefuck --alias)
 
 # git functions
 _ZSHRC_FILE="$(readlink -f $HOME/.zshrc)"

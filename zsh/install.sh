@@ -4,7 +4,7 @@ source ../utils.sh
 
 if test-arch; then
     # ZSH
-    arch-install zsh tmux
+    arch-install zsh tmux thefuck
 
     # oh-my-zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -15,6 +15,7 @@ if test-arch; then
     # Custom plugins
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/zsh-syntax-highlighting
     git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/themes/powerlevel10k
+    git clone https://github.com/unixorn/git-extra-commands.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"/plugins/git-extra-commands
 
     # Custom scripts
     for script in ./scripts/*; do
@@ -23,6 +24,8 @@ if test-arch; then
 elif test-debian; then
     # ZSH
     debian-install zsh
+
+    # TODO: install thefuck
 
     # Oh-My-Zsh
     sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
