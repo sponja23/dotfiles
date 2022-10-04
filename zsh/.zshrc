@@ -113,6 +113,7 @@ alias python=python3
 alias pip=pip3
 alias zshconfig="$EDITOR ~/.zshrc"
 alias vim=nvim
+alias pn=pnpm
 
 # Functions
 function open() {
@@ -147,3 +148,7 @@ _ZSHRC_FILE="$(readlink -f $HOME/.zshrc)"
 for file in "$(dirname $_ZSHRC_FILE)"/functions/*; do
     source $file
 done
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
