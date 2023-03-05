@@ -32,7 +32,6 @@ plugins=(
     git
     git-flow-avh
     gitignore
-    git-extra-commands
     screen
     sudo
     themes

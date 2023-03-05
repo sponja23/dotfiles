@@ -25,13 +25,12 @@ uncomment() {
     sed -ri "s:^([ ]*)[$comment_mark]+[ ]?([ ]*$regex):\\1\\2:" "$file"
 }
 
-
 ### Package installers
 arch-install() {
     sudo pacman -S --noconfirm "$@"
 }
 
-AUR_HELPER=yay
+AUR_HELPER="${AUR_HELPER:-paru}"
 
 aur-install() {
     $AUR_HELPER -S --noconfirm "$@"
@@ -42,5 +41,16 @@ debian-install() {
 }
 
 debian-add-repository() {
-    sudo add-apt-repository -y "$@" 
+    sudo add-apt-repository -y "$@"
+}
+
+check_program() {
+    if ! command -v "$1" &>/dev/null; then
+        echo "Program $1 not found. Please install it and try again."
+        exit 1
+    fi
+}
+
+link-files() {
+    stow --target="$HOME" --ignore="(README.md|install.sh)" --no-folding "$1"
 }

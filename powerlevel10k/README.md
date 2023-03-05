@@ -2,5 +2,5 @@
 
 ## Requirements
 
-* [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 * A compatible font.
+* **[powerlevel10k](https://github.com/romkatv/powerlevel10k) is included as a submodule.**
