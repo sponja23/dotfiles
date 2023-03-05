@@ -4,6 +4,7 @@
 
 packages=(
     alacritty
+    neovim
     powerlevel10k
     zsh
 )

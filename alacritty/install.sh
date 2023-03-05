@@ -7,6 +7,8 @@ check_program stow
 if [ -x "$(command -v alacritty)" ]; then
     echo "alacritty already installed, skipping..."
 else
+    echo "Installing alacritty..."
+
     if test-arch; then
         arch-install alacritty ttf-meslo-nerd-font-powerlevel10k
     elif test-debian; then
