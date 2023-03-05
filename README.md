@@ -1,3 +1,3 @@
 # Linux Dotfiles
 
-The dotfiles I use on my linux distros, along with some installation scripts.
+The dotfiles I use on my linux distros, managed with [GNU Stow](https://www.gnu.org/software/stow/).

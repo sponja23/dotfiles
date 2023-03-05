@@ -1,8 +1,6 @@
-# Alacritty Dotfiles
+# Alacritty configuration
 
+## Requirements
 
-## alacritty.yml
-
-Requirements:
-
-     * UbuntuMono font
+* [alacritty](https://github.com/alacritty/alacritty).
+* Meslo Nerd Font patched for Powerlevel10k.

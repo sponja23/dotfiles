@@ -1,1 +1,5 @@
-/test.sh
+# zsh history file
+/zsh/.config/zsh/.zsh_history
+
+# zsh completion cache
+/zsh/.config/zsh/.zcompdump*
