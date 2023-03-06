@@ -54,3 +54,9 @@ check_program() {
 link-files() {
     stow --target="$HOME" --ignore="(README.md|install.sh)" --no-folding "$1"
 }
+
+prompt() {
+    echo -n "$1 [y/N] "
+    read -r
+    [[ $REPLY =~ ^[Yy]$ ]]
+}

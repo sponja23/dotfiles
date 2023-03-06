@@ -4,20 +4,32 @@ source ../utils.sh
 
 check_program stow
 
-if [ -x "$(command -v alacritty)" ]; then
-    echo "alacritty already installed, skipping..."
-else
+# Alacritty
+if ! [ -x "$(command -v alacritty)" ] && prompt "alacritty not found. Install it now?"; then
     echo "Installing alacritty..."
 
     if test-arch; then
-        arch-install alacritty ttf-meslo-nerd-font-powerlevel10k
+        arch-install alacritty
     elif test-debian; then
         check_program cargo
-        
-        cargo install alacritty
 
+        cargo install alacritty
+    else
+        echo "Unsupported OS. Please install alacritty manually."
+        exit 1
+    fi
+fi
+
+# MesloLGS Nerd Font
+if ! [ -f "/usr/share/fonts/MesloLGS-NF-Regular.ttf" ] && prompt "MesloLGS Nerd Font not found. Install it now?"; then
+    echo "Installing MesloLGS Nerd Font..."
+
+    if test-arch; then
+        check_program "$AUR_HELPER"
+
+        aur-install ttf-meslo-nerd-font-powerlevel10k
+    elif test-debian; then
         (
-            # Meslo Nerd Font install
             # Clone repo into tmp
             cd /tmp || exit 1
 
@@ -35,7 +47,7 @@ else
             rm -rf ./powerlevel10k-media
         )
     else
-        echo "Unsupported OS. Please install alacritty manually."
+        echo "Unsupported OS. Please install MesloLGS Nerd Font manually."
         exit 1
     fi
 fi

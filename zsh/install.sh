@@ -4,9 +4,7 @@ source ../utils.sh
 
 check_program stow
 
-if [ -x "$(command -v zsh)" ]; then
-    echo "zsh is already installed, skipping..."
-else
+if ! [ -x "$(command -v zsh)" ] && prompt "zsh not found. Install it now?"; then
     echo "Installing zsh..."
 
     if test-arch; then
@@ -19,9 +17,7 @@ else
     fi
 fi
 
-if [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh}" ]; then
-    echo "oh-my-zsh is already installed, skipping..."
-else
+if ! [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh}" ] && prompt "oh-my-zsh not found. Install it now?"; then
     check_program curl
 
     echo "Installing oh-my-zsh..."

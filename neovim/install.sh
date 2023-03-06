@@ -5,23 +5,22 @@ source ../utils.sh
 check_program stow
 
 # Neovim
-if [ -x "$(command -v nvim)" ]; then
-    echo "neovim is already installed, skipping..."
-else
+if ! [ -x "$(command -v nvim)" ] && prompt "neovim not found. Install it now?"; then
     echo "Installing neovim..."
 
     if test-arch; then
         arch-install neovim
+    elif test-debian; then
+        debian-install neovim
     else
         echo "Unsupported OS. Please install neovim manually."
+        echo "See: https://github.com/neovim/neovim/wiki/Installing-Neovim"
         exit 1
     fi
 fi
 
 # Packer
-if [ -d "$HOME/.local/share/nvim/site/pack/packer" ]; then
-    echo "packer.nvim is already installed, skipping..."
-else
+if ! [ -d "$HOME/.local/share/nvim/site/pack/packer" ] && prompt "packer.nvim not found. Install it now?"; then
     echo "Installing packer.nvim..."
 
     if test-arch; then
