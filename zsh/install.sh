@@ -24,5 +24,3 @@ if ! [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh}" ] && prompt "oh-my-zsh not found. In
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
-
-link-files .

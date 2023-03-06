@@ -8,5 +8,3 @@ if ! [ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh}" ]; then
     echo "Please install oh-my-zsh first."
     exit 1
 fi
-
-link-files .

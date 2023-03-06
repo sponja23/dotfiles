@@ -33,5 +33,3 @@ if ! (fc-list | grep -q MesloLGS-NF) && prompt "MesloLGS Nerd Font not found. In
         exit 1
     fi
 fi
-
-link-files .

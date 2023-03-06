@@ -39,5 +39,3 @@ check_program curl
 check_program unzip
 check_program tar
 check_program gzip
-
-link-files .
