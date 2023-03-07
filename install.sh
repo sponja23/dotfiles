@@ -11,6 +11,4 @@ packages=(
 
 for package in "${packages[@]}"; do
     . "$PWD/$package/install.sh"
-
-    link-files "$package"
 done
