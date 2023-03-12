@@ -3,3 +3,6 @@
 
 # zsh completion cache
 /zsh/.config/zsh/.zcompdump*
+
+# Stack build artifacts
+/xmonad/.config/xmonad/.stack-work

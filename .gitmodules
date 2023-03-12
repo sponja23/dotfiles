@@ -7,3 +7,6 @@
 [submodule "neovim/.config/nvim"]
 	path = neovim/.config/nvim
 	url = git@github.com:sponja23/nvim-config.git
+[submodule "xmonad/.config/xmonad"]
+	path = xmonad/.config/xmonad
+	url = git@github.com:sponja23/xmonad-config.git
