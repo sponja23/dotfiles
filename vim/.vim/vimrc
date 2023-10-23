@@ -1,0 +1,24 @@
+set nocompatible
+
+" Use 4 tabs for indentation
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+
+" Use colors
+set termguicolors
+
+" Syntax highlighting
+filetype plugin indent on
+syntax on
+
+" Always show current mode
+set showmode
+
+" Show typed keys when expecting more
+set showcmd
+
+" Highlight searches
+set incsearch
+set hlsearch

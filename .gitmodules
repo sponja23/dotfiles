@@ -10,3 +10,6 @@
 [submodule "xmonad/.config/xmonad"]
 	path = xmonad/.config/xmonad
 	url = git@github.com:sponja23/xmonad-config.git
+[submodule "vim/.vim/pack/tpope/start/sensible"]
+	path = vim/.vim/pack/tpope/start/sensible
+	url = https://tpope.io/vim/sensible.git
