@@ -8,5 +8,6 @@ link-files neovim # Fold nvim config
 link-files --no-folding powerlevel10k
 link-files --no-folding zsh
 link-files vim # Fold vim config
+link-files --no-folding i3
 # link-files --no-folding x
 # link-files xmonad # Fold xmonad config
