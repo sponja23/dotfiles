@@ -9,9 +9,14 @@ exec --no-startup-id ksuperkey
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
-# start the web browser
+# start a web browser
 bindsym $mod+w exec google-chrome-stable
 bindsym $mod+Shift+w exec google-chrome-stable -incognito
+
+# start a file manager
+bindsym $mod+f exec nemo
+
+###
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -98,7 +103,7 @@ bindsym $mod+b split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
