@@ -22,3 +22,9 @@ set showcmd
 " Highlight searches
 set incsearch
 set hlsearch
+
+" Line numbers
+set relativenumber
+
+" Colorscheme
+
