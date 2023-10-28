@@ -61,12 +61,21 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias python=python3
 alias pip=pip3
-alias zshconfig="$EDITOR ~/.zshrc"
 alias pn=pnpm
 
 # Functions
 function open() {
     xdg-open $@ > /dev/null 2>&1
+}
+
+function zshconfig() {
+    if [[ -f "$HOME/.zshrc" ]]; then
+        $EDITOR "$HOME/.zshrc" 
+    elif [[ -f "$HOME/.config/zsh/.zshrc" ]]; then
+        $EDITOR "$HOME/.config/zsh/.zshrc" 
+    else
+        echo "zsh config not found"
+    fi
 }
 
 # Completions
@@ -76,7 +85,7 @@ autoload bashcompinit && bashcompinit
 zstyle ':completion:*' verbose yes
 
 # [ "$(command -v pipenv)" ] && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # Pipenv completions
-[ -x "$(command -v rclone)" ] && rclone completion zsh > "${fpath[1]}/_rclone"
+# [ -x "$(command -v rclone)" ] && rclone completion zsh > "${fpath[1]}/_rclone"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
