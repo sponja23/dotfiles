@@ -6,3 +6,6 @@
 
 # Stack build artifacts
 /xmonad/.config/xmonad/.stack-work
+
+# vim undodir
+/vim/.vim/undodir
