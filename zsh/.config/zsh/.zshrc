@@ -65,7 +65,7 @@ alias pn=pnpm
 
 # Functions
 function open() {
-    xdg-open $@ > /dev/null 2>&1
+    xdg-open $@ > /dev/null 2>&1 & disown
 }
 
 function zshconfig() {
