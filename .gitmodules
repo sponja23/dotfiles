@@ -13,3 +13,6 @@
 [submodule "nvim/.config/nvim/lua/custom"]
 	path = nvim/.config/nvim/lua/custom
 	url = git@github.com:sponja23/nvchad-config.git
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = git@github.com:sponja23/nvim-config.git
