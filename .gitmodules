@@ -10,9 +10,6 @@
 [submodule "vim/.vim/pack/tpope/start/sensible"]
 	path = vim/.vim/pack/tpope/start/sensible
 	url = https://tpope.io/vim/sensible.git
-[submodule "nvim/.config/nvim/lua/custom"]
-	path = nvim/.config/nvim/lua/custom
-	url = git@github.com:sponja23/nvchad-config.git
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:sponja23/nvim-config.git
