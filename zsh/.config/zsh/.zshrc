@@ -63,6 +63,9 @@ alias python=python3
 alias pip=pip3
 alias pn=pnpm
 
+# zoxide setup
+eval "$(zoxide init --cmd cd zsh)"
+
 # Functions
 function open() {
     xdg-open $@ > /dev/null 2>&1 & disown
