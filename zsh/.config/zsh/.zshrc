@@ -17,6 +17,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
 
+# Completions
+autoload compinit && compinit
+autoload bashcompinit && bashcompinit
+
+zstyle ':completion:*' verbose yes
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -24,6 +30,7 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
+    fzf-tab
     autojump
     colored-man-pages
     command-not-found
@@ -80,12 +87,6 @@ function zshconfig() {
         echo "zsh config not found"
     fi
 }
-
-# Completions
-autoload compinit && compinit
-autoload bashcompinit && bashcompinit
-
-zstyle ':completion:*' verbose yes
 
 # [ "$(command -v pipenv)" ] && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # Pipenv completions
 # [ -x "$(command -v rclone)" ] && rclone completion zsh > "${fpath[1]}/_rclone"

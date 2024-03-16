@@ -13,3 +13,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:sponja23/nvim-config.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/fzf-tab"]
+	path = zsh/.oh-my-zsh/custom/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab
