@@ -65,13 +65,19 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# fzf-tab config
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+
 # Aliases
 alias python=python3
 alias pip=pip3
 alias pn=pnpm
 
-# zoxide setup
-eval "$(zoxide init --cmd cd zsh)"
+# If zoxide is installed, use it
+[ -x "$(command -v zoxide)" ] && eval "$(zoxide init --cmd cd zsh)"
+
+# If exa is installed, use it
+[ -x "$(command -v exa)" ] && alias ls='exa'
 
 # Functions
 function open() {
@@ -105,7 +111,7 @@ ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
 # The Fuck setup
 [ -x "$(command -v thefuck)" ] && eval $(thefuck --alias)
 
-# git functions
+# Functions
 _ZSHRC_FILE="$(readlink -f $ZDOTDIR/.zshrc)"
 for file in "$(dirname $_ZSHRC_FILE)"/functions/*; do
     source $file
